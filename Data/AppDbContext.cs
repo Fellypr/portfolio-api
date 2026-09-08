@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using portfolioApi.Models;
-namespace BackEnd.Data
+namespace portfolioApi.Data
 {
     public class AppDbContext : DbContext
     {
