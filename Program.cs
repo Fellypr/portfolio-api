@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using portfolioApi.Data;
+using portfolioApi.Services;
+using portfolioApi.Services.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 
 builder.Services.AddCors(options =>
 {
