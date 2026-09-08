@@ -1,0 +1,56 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE/editor folders
+.vs/
+.vscode/
+.idea/
+
+# Local development settings and secrets
+appsettings.Development.json
+appsettings.*.local.json
+.env
+.env.*
+!.env.example
+
+# ASP.NET local launch profiles can contain local environment variables
+Properties/launchSettings.json
+
+# Logs
+*.log
+logs/
+
+# Test and coverage output
+TestResults/
+coverage/
+coverage.*/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+packages/
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Certificates and keys
+*.pfx
+*.p12
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
