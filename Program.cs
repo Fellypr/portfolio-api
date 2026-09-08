@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IAboutMeService, AboutMeService>();
 
 builder.Services.AddCors(options =>
 {
