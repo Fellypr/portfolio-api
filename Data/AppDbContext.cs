@@ -6,6 +6,7 @@ namespace portfolioApi.Data
     {
         public DbSet<Projects> Projects {get;set;}
         public DbSet<AboutMe> AboutMe { get; set; }
+        public DbSet<Contacts> Contacts { get; set; }
 
         public AppDbContext (DbContextOptions<AppDbContext> options) : base(options)
         {}
