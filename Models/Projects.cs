@@ -15,5 +15,7 @@ namespace portfolioApi.Models
         public string UrlImage { get; set; }
         public string Status { get; set; }
         public string Technologies{get; set;}
+        public string WebsiteUrl { get; set; }
+        public string GithubUrl { get; set; }
     }
 }

@@ -23,5 +23,11 @@ namespace portfolioApi.DTOs
         [Required(ErrorMessage = "As tecnologias do projeto sao obrigatorias.")]
         [MaxLength(300, ErrorMessage = "As tecnologias devem ter no maximo 300 caracteres.")]
         public string Technologies { get; set; }
+        
+        [Url(ErrorMessage = "Informe uma URL de site valida.")]
+        public string WebsiteUrl { get; set; }
+
+        [Url(ErrorMessage = "Informe uma URL do GitHub valida.")]
+        public string GithubUrl { get; set; }
     }
 }

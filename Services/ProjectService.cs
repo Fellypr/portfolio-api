@@ -44,7 +44,9 @@ namespace portfolioApi.Services
                 Description = createProjectDto.Description.Trim(),
                 UrlImage = createProjectDto.UrlImage.Trim(),
                 Status = createProjectDto.Status.Trim(),
-                Technologies = createProjectDto.Technologies.Trim()
+                Technologies = createProjectDto.Technologies.Trim(),
+                WebsiteUrl = string.IsNullOrWhiteSpace(createProjectDto.WebsiteUrl) ? null : createProjectDto.WebsiteUrl.Trim(),
+                GithubUrl = string.IsNullOrWhiteSpace(createProjectDto.GithubUrl) ? null : createProjectDto.GithubUrl.Trim()
             };
 
             _context.Projects.Add(project);
@@ -81,6 +83,8 @@ namespace portfolioApi.Services
             project.UrlImage = updateProjectDto.UrlImage.Trim();
             project.Status = updateProjectDto.Status.Trim();
             project.Technologies = updateProjectDto.Technologies.Trim();
+            project.WebsiteUrl = string.IsNullOrWhiteSpace(updateProjectDto.WebsiteUrl) ? null : updateProjectDto.WebsiteUrl.Trim();
+            project.GithubUrl = string.IsNullOrWhiteSpace(updateProjectDto.GithubUrl) ? null : updateProjectDto.GithubUrl.Trim();
 
             await _context.SaveChangesAsync();
 
@@ -113,7 +117,9 @@ namespace portfolioApi.Services
                 Description = project.Description,
                 UrlImage = project.UrlImage,
                 Status = project.Status,
-                Technologies = project.Technologies
+                Technologies = project.Technologies,
+                WebsiteUrl = project.WebsiteUrl,
+                GithubUrl = project.GithubUrl
             };
         }
     }

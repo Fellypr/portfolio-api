@@ -79,6 +79,9 @@ namespace portfolioApi.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<string>("GithubUrl")
+                        .HasColumnType("text");
+
                     b.Property<string>("Status")
                         .HasColumnType("text");
 
@@ -89,6 +92,9 @@ namespace portfolioApi.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UrlImage")
+                        .HasColumnType("text");
+
+                    b.Property<string>("WebsiteUrl")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
