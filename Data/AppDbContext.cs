@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using portfolioApi.Data.Configurations;
 using portfolioApi.Models;
 
 namespace portfolioApi.Data
@@ -17,11 +18,7 @@ namespace portfolioApi.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>(entity =>
-            {
-                entity.HasIndex(u => u.Email).IsUnique();
-                entity.HasIndex(u => u.Username).IsUnique();
-            });
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }

@@ -18,8 +18,5 @@ namespace portfolioApi.DTOs
         [MinLength(6, ErrorMessage = "A senha deve ter no minimo 6 caracteres.")]
         [MaxLength(100, ErrorMessage = "A senha deve ter no maximo 100 caracteres.")]
         public string Password { get; set; }
-
-        [MaxLength(50, ErrorMessage = "A role deve ter no maximo 50 caracteres.")]
-        public string Role { get; set; } = "User";
     }
 }

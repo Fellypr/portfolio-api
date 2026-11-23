@@ -13,8 +13,5 @@ namespace portfolioApi.DTOs
         [EmailAddress(ErrorMessage = "Informe um email valido.")]
         [MaxLength(255, ErrorMessage = "O email deve ter no maximo 255 caracteres.")]
         public string Email { get; set; }
-
-        [MaxLength(50, ErrorMessage = "A role deve ter no maximo 50 caracteres.")]
-        public string Role { get; set; }
     }
 }

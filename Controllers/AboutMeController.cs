@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using portfolioApi.DTOs;
 using portfolioApi.Services.Interfaces;
@@ -22,6 +23,7 @@ namespace portfolioApi.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpPost("AddAboutMe")]
         public async Task<ActionResult<ApiResponse<AboutMeResponseDto>>> AddAboutMe(CreateAboutMeDto createAboutMeDto)
         {
@@ -34,6 +36,7 @@ namespace portfolioApi.Controllers
             return StatusCode(201, response);
         }
 
+        [Authorize]
         [HttpPut("UpdateAboutMe/{id}")]
         public async Task<ActionResult<ApiResponse<AboutMeResponseDto>>> UpdateAboutMe(int id, UpdateAboutMeDto updateAboutMeDto)
         {
@@ -46,6 +49,7 @@ namespace portfolioApi.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpDelete("DeleteAboutMe/{id}")]
         public async Task<ActionResult<ApiResponse<bool>>> DeleteAboutMe(int id)
         {

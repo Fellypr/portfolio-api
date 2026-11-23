@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using portfolioApi.DTOs;
 using portfolioApi.Services.Interfaces;
@@ -22,6 +23,7 @@ namespace portfolioApi.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpPost("AddProject")]
         public async Task<ActionResult<ApiResponse<ProjectResponseDto>>> AddProject(CreateProjectDto createProjectDto)
         {
@@ -33,6 +35,7 @@ namespace portfolioApi.Controllers
             return StatusCode(201, response);
         }
 
+        [Authorize]
         [HttpPut("UpdateProject/{id}")]
         public async Task<ActionResult<ApiResponse<ProjectResponseDto>>> UpdateProject(int id, UpdateProjectDto updateProjectDto)
         {
@@ -45,6 +48,7 @@ namespace portfolioApi.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpDelete("DeleteProject/{id}")]
         public async Task<ActionResult<ApiResponse<bool>>> DeleteProject(int id)
         {
